@@ -10,3 +10,10 @@ systeminfo ---> my favourite, lol
 wmic qfe get Caption, Description
 wmic product get name,version,vendor
 net <user> <localgroup> <administrators>
+check files like
+  C:\Unattend.xml
+  C:\Windows\Panther\Unattend.xml
+  C:\Windows\Panther\Unattend\Unattend.xml
+  C:\Windows\system32\sysprep.inf
+  C:\Windows\system32\sysprep\sysprep.xml
+
