@@ -1,0 +1,12 @@
+Linux
+ls /etc/*-release
+ls -lh /var/mail/
+dpkg -i
+sudo netstat -atupn
+ps -ef | grep boorgir
+
+Windows
+systeminfo ---> my favourite, lol
+wmic qfe get Caption, Description
+wmic product get name,version,vendor
+net <user> <localgroup> <administrators>
