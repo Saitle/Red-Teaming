@@ -1,7 +1,2 @@
-Get-ADUser  -Filter *
-Get-ADUser -Filter * -SearchBase "CN=Users,DC=THMREDTEAM,DC=COM"
-Get-Service WinDefend
-Get-MpComputerStatus | select RealTimeProtectionEnabled
-Get-Process | Where-Object { $_.ProcessName -eq "whatever" }
 
  
