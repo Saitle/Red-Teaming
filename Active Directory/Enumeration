@@ -3,3 +3,44 @@ Get-ADUser -Filter * -SearchBase "CN=Users,DC=THMREDTEAM,DC=COM"
 Get-Service WinDefend
 Get-MpComputerStatus | select RealTimeProtectionEnabled
 Get-Process | Where-Object { $_.ProcessName -eq "whatever" }
+
+LOgging in with runas
+runas.exe /netonly /user:<domain>\<username> cmd.exe
+
+Configuring target DNS
+$dnsip = "<DC IP>"
+$index = Get-NetAdapter -Name 'Ethernet' | Select-Object -ExpandProperty 'ifIndex'
+Set-DnsClientServerAddress -InterfaceIndex $index -ServerAddresses $dnsip
+
+net user /domain
+net user joe.mama /domain
+net group /domain
+net group "Tier 1 Admins" /domain
+net accounts /domain
+
+Get-ADUser -Identity joe.mama -Server lo.AD1.com -Properties *
+Get-ADUser -Filter 'Name -like "*stevens"' -Server za.purrr.com | Format-Table Name,SamAccountName -A
+Get-ADGroup -Identity Administrators -Server za.tryhackme.com
+Get-ADGroupMember -Identity Administrators -Server za.purrr.com
+
+PS C:\> Get-ADObject -Filter 'badPwdCount -gt 0' -Server za.tryhackme.com
+
+Get-ADDomain -Server za.tryhackme.com
+
+Altering things
+Set-ADAccountPassword -Identity gordon.stevens -Server za.tryhackme.com -OldPassword (ConvertTo-SecureString -AsPlaintext "old" -force) -NewPassword (ConvertTo-SecureString -AsPlainText "new" -Force)
+
+Enumeration via sharphound/bloodhound
+Sharphound.exe --CollectionMethods <Methods> --Domain za.tryhackme.com --ExcludeDCs
+
+Copy zip on your machine
+scp <AD Username>@THMJMP1.za.tryhackme.com:C:/Users/<AD Username>/Documents/<Sharphound ZIP> .
+
+Enumeration via powerview
+https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
+
+Via WMI
+https://0xinfection.github.io/posts/wmi-ad-enum/
+
+
+
