@@ -9,6 +9,7 @@
 **Windows enumeration**
 
 `https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS`
+
 `https://github.com/itm4n/PrivescCheck`
 
 **Poisoning**
@@ -22,13 +23,17 @@
 **Frameworks**
 
 `https://github.com/Coalfire-Research/Red-Baron`
+
 `https://github.com/trustedsec/ptf`
 
 **Just some C2 Things**
 
 `beacons for communinication over encrypted traffic---> https://github.com/rsmudge/Malleable-C2-Profiles/blob/master/normal/amazon.profile`
+
 `https://github.com/EmpireProject/Empire`
+
 `Armitage and Caldera for beginners`
+
 `Wanna try out the young C2 beast? Sliver is the answer--> https://github.com/BishopFox/sliver`
 
 
