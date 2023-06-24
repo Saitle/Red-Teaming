@@ -19,5 +19,15 @@
 
 `https://lightsail.aws.amazon.com/`
 
+**Frameworks**
+https://github.com/Coalfire-Research/Red-Baron
+https://github.com/trustedsec/ptf 
+
+**Just some C2 Things**
+`beacons for communinication over encrypted traffic---> https://github.com/rsmudge/Malleable-C2-Profiles/blob/master/normal/amazon.profile`
+`https://github.com/EmpireProject/Empire`
+``
+``
+
 
 
