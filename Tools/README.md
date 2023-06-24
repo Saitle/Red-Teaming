@@ -12,6 +12,8 @@
 
 `https://github.com/itm4n/PrivescCheck`
 
+`https://github.com/leostat/rtfm`
+
 **Poisoning**
 
 `https://github.com/lgandx/Responder`
