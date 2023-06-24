@@ -1,14 +1,22 @@
-**SNMP for linux boxes**
+<h2>**Some of the Extra OverPowered Tools you might wanna use..**</h2>
+
+---
+
+###**SNMP for linux boxes**###
+
 `https://gitlab.com/kalilinux/packages/snmpcheck.git`
 
-**Windows enumeration**
+###**Windows enumeration**###
+
 `https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS`
 `https://github.com/itm4n/PrivescCheck`
 
-Poisoning
+###**Poisoning**###
+
 `https://github.com/lgandx/Responder`
 
-**VPS**
+###**VPS**###
+
 `https://lightsail.aws.amazon.com/`
 
 
