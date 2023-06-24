@@ -28,3 +28,24 @@ type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr
 Retrieve Credentials from Software: PuTTY
 reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
 
+Network information:
+netstat -anop | findstr LISTEN
+net group "Domain Admins" /domain
+Process List:
+tasklist /v
+System Host Information:
+sysinfo
+Get-WmiObject -class win32 operatingsystem | select -property * |
+exportcsv c:\temp\os.txt
+wmic qfe get Caption,Description,HotFixID,InstalledOn
+Simple File Search:
+dir /s *password*
+findstr s n i p foo *
+findstr /si pass *.txt | .xml | .ini
+Information From Shares/Mounted Drives:
+powershell -Command "get-WmiObject -class Win32_Share"
+powershell -Command "get-PSDrive"
+powershell -Command "Get-WmiObject -Class
+Win32_MappedLogicalDisk | select Name, ProviderName”
+
+
