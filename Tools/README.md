@@ -1,1 +1,14 @@
-test
+SNMP for linux boxes
+https://gitlab.com/kalilinux/packages/snmpcheck.git 
+
+https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+
+https://github.com/itm4n/PrivescCheck
+
+https://github.com/lgandx/Responder
+
+VPS
+https://lightsail.aws.amazon.com/
+
+
+
