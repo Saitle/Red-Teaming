@@ -1,5 +1,13 @@
 <h1>Some of the Extra OverPowered Tools you might wanna use..</h1>
 
+**Linux enumeration**
+
+`(https://github.com/rebootuser/LinEnum)`
+
+`https://github.com/mzet-/linux-exploit-suggester`
+
+`DNScat2`
+
 
 
 **SNMP for linux boxes**
@@ -21,6 +29,8 @@
 `https://github.com/peewpw/Invoke-WCMDump/blob/master/Invoke-WCMDump.ps1`
 
 `https://github.com/sekirkity/BrowserGather`
+
+`https://github.com/eladshamir/Internal-Monologue`
 
 **Poisoning**
 
@@ -84,6 +94,27 @@
 
 `https://github.com/frohoff/ysoserial`
 
+`https://github.com/cheetz/ceylogger/tree/master/version3`
+
+**Obfuscation and Droppers**
+
+`https://github.com/cheetz/thpDropper.git`
+
+`https://github.com/mdsecactivebreach/SharpShooter`
+
+`https://github.com/GreatSCT/GreatSCT`
+
+
+**Payload Generator**
+
+`https://github.com/nccgroup/demiguise`
+
+`https://github.com/Arno0x/EmbedInHTML`
+
+`https://github.com/mdsecactivebreach/CACTUSTORCH`
+
+`https://github.com/trustedsec/nps_payload`
+
 
 **Cloud**
 
@@ -92,8 +123,6 @@
 `AWSCLI`
 
 `https://github.com/anshumanbh/tko-subs`
-
-``
 
 **OSINT**
 
@@ -105,6 +134,25 @@
 `https://github.com/sensepost/ruler`
 
 ``
+
+**Social Engineering**
+
+`https://github.com/kgretzky/evilginx`
+
+`https://github.com/ustayready/CredSniper`
+
+`https://github.com/pentestgeek/phishing-frenzy`
+
+`https://github.com/securestate/king-phisher`
+
+**Macros Hell**
+
+`https://github.com/curi0usJack/luckystrike`
+
+`https://github.com/Pepitoh/VBad`
+
+`Unicorn`
+
 
 
 
