@@ -14,6 +14,14 @@
 
 `https://github.com/leostat/rtfm`
 
+`https://github.com/gentilkiwi/mimikatz`
+
+`https://github.com/samratashok/nishang/blob/master/Gather/Get-WebCredentials.ps1`
+
+`https://github.com/peewpw/Invoke-WCMDump/blob/master/Invoke-WCMDump.ps1`
+
+`https://github.com/sekirkity/BrowserGather`
+
 **Poisoning**
 
 `https://github.com/lgandx/Responder`
